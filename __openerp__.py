@@ -21,7 +21,7 @@
 
 {
     'name' : 'INECO Sale Sequence',
-    'version' : '0.1',
+    'version' : '1.0',
     'depends' : ["sale"
                 ],
     'author' : 'INECO LTD.,PART.',
