@@ -35,9 +35,9 @@
                     """,
     "version" : "1.0",
     "depends" : ["base","sale"],
-    "author" : "INECO Part.,Ltd.",
+    "author" : "INECO LTD., PART.",
     "category": "INECO",
-    "url": "http://openerp.tititab.com",
+    "url": "http://www.ineco.co.th",
     "data": [ ],
     'update_xml': [       
         'report_view.xml', 

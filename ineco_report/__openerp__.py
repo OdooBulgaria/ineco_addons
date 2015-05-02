@@ -33,9 +33,9 @@
     "name" : "Ineco Report Engine",
     "description" : """
                     """,
-    "version" : "1",
+    "version" : "1.0",
     "depends" : ["base"],
-    "author" : "INECO Part.,Ltd.",
+    "author" : "INECO LTD., PART.",
     "category": "INECO",
     "url": "http://www.ineco.co.th",
     "data": [ "security.xml", "ir_report_view.xml","ineco_report_view.xml"],

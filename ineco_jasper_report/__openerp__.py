@@ -34,9 +34,9 @@
     "description" : """
 1. Please install M2CRYPTO by sudo apt-get install python-m2crypto
                     """,
-    "version" : "1",
+    "version" : "1.0",
     "depends" : ["base"],
-    "author" : "INECO Part.,Ltd.",
+    "author" : "INECO LTD., PART.",
     "category": "INECO",
     "url": "http://www.ineco.co.th",
     "data": [ ],
