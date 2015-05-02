@@ -1,3 +1,4 @@
-INECO SALE SQUENCE
+INECO MODULE
 -------------------------------------------
-Will generate quotation / sale order by shop (sequence in shop).
+1. Generate quotation / sale order number by shop (ineco_sale_sequence)
+2. Auto generate EAN13 by default_code (ineco_ean13_auto)
