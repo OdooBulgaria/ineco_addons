@@ -33,10 +33,10 @@
     "name" : "Ineco Purchase Reports",
     "description" : """
                     """,
-    "version" : "0.1",
+    "version" : "1.0",
     "depends" : ["base","purchase"],
-    "author" : "INECO",
-    "category": "Report",
+    "author" : "INECO Part.,Ltd.",
+    "category": "INECO",
     "url": "http://openerp.tititab.com",
     "data": [ ],
     'update_xml': [       

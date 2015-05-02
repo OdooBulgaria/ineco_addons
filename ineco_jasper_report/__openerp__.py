@@ -34,11 +34,11 @@
     "description" : """
 1. Please install M2CRYPTO by sudo apt-get install python-m2crypto
                     """,
-    "version" : "0.1",
+    "version" : "1",
     "depends" : ["base"],
-    "author" : "INECO",
-    "category": "Report Tools",
-    "url": "http://openerp.tititab.com",
+    "author" : "INECO Part.,Ltd.",
+    "category": "INECO",
+    "url": "http://www.ineco.co.th",
     "data": [ ],
     'update_xml': [
         'ineco_jasper_report_view.xml',
