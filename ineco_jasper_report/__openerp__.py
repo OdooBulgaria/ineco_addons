@@ -30,7 +30,7 @@
 ##############################################################################
 
 {
-    "name" : "Ineco Jasper Report Plug-in",
+    "name" : "INECO Jasper Report Link",
     "description" : """
 1. Please install M2CRYPTO by sudo apt-get install python-m2crypto
                     """,

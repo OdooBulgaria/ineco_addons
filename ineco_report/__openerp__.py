@@ -30,7 +30,7 @@
 ##############################################################################
 
 {
-    "name" : "Ineco Report Engine",
+    "name" : "INECO Report Engine",
     "description" : """
                     """,
     "version" : "1.0",

@@ -30,7 +30,7 @@
 ##############################################################################
 
 {
-    "name" : "Ineco Purchase Reports",
+    "name" : "INECO Purchase Reports Link",
     "description" : """
                     """,
     "version" : "1.0",

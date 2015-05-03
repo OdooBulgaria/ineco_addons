@@ -30,7 +30,7 @@
 ##############################################################################
 
 {
-    "name" : "Ineco Sale Reports",
+    "name" : "INECO Sale Reports Link",
     "description" : """
                     """,
     "version" : "1.0",
