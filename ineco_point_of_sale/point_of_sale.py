@@ -199,6 +199,7 @@ class ineco_pos_summary(osv.osv):
         'user_id': fields.many2one('res.users','User'),
         'transaction_count': fields.integer('Count'),
         'amount_total': fields.float('Total'),
+        'day': fields.char('Day',size=2),
     }
     
     def init(self, cr):
@@ -210,7 +211,8 @@ class ineco_pos_summary(osv.osv):
                   po.date_order::date as date_order,
                   ru.id as user_id,
                   count(*) as transaction_count,
-                  sum(pol.price_subtotal_incl) as amount_total
+                  sum(pol.price_subtotal_incl) as amount_total,
+                  to_char(extract(month from po.date_order),'00') as day
                 from pos_order po
                 join pos_session ps on po.session_id = ps.id
                 join res_users ru on ru.id = po.user_id

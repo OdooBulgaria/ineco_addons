@@ -198,6 +198,7 @@
             <field name="arch" type="xml">
                 <tree string="POS Summary">
                 	<field name="date_order" />
+                	<field name="day" invisible="1" />
                 	<field name="user_id" />
                 	<field name="transaction_count" sum="Count" />
                 	<field name="amount_total" sum="Total" />
@@ -212,10 +213,12 @@
             <field name="arch" type="xml">
                 <search string="POS Summary">
                 	<field name="date_order" />
+                	<field name="day" />
                 	<field name="user_id" />
 	               <group expand="0" string="Group By...">
 	                   <filter string="User" icon="terp-partner" domain="[]" context="{'group_by':'user_id'}"/>
 	                   <filter string="Date Order" domain="[]" context="{'group_by':'date_order'}" />
+	                   <filter string="Day" domain="[]" context="{'group_by':'day'}" />
 	               </group>
               	</search>
             </field>
