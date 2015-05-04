@@ -76,8 +76,11 @@ def createRequest(**kwargs):
     return ET.tostring(r)
 
 def parseMultipart(res):
-    print res
-    boundary = re.search(r'----=[^\r\n]*',res).group()
+    #print res
+    try:
+        boundary = re.search(r'----=[^\r\n]*',res).group()
+    except:
+        print res
     res = " \n"+res
     res = "Content-Type: multipart/alternative; boundary=%s\n%s" % (boundary, res)
     message = email.message_from_string(res)
