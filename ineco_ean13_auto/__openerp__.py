@@ -31,6 +31,7 @@ Feature:
     """,
     'website': 'http://www.ineco.co.th',
     'data': [
+        'wizard/wizard_fill_ean13_view.xml',
     ],
     'demo': [],
     'installable': True,

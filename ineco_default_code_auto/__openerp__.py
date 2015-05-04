@@ -30,6 +30,7 @@
     'depends' : ['product'
     ],
     'data' : [
+        'wizard/wizard_fill_defaultcode_view.xml',
     ],
     'update_xml' : [
     ],
