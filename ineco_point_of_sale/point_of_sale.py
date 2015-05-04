@@ -52,6 +52,7 @@ class ineco_stock_receive(osv.osv):
         'product_id': fields.many2one('product.product','Product'),
         'default_code': fields.char('Code', size=64),
         'uom_id': fields.many2one('product.uom','Uom'),
+        'day': fields.char('Day', size=2),
     }
     
     def init(self, cr):
@@ -70,7 +71,8 @@ class ineco_stock_receive(osv.osv):
                   sm.product_uom_qty,
                   sm.product_id,
                   pp.default_code,
-                  sm.product_uom as uom_id
+                  sm.product_uom as uom_id,
+                  to_char(extract(month from sp.date),'00') as day
                 from stock_picking sp
                 join stock_picking_type spt on spt.id = sp.picking_type_id
                 join stock_warehouse sw on sw.id = spt.warehouse_id
@@ -99,6 +101,7 @@ class ineco_stock_sale(osv.osv):
         'product_id': fields.many2one('product.product','Product'),
         'default_code': fields.char('Code', size=64),
         'uom_id': fields.many2one('product.uom','Uom'),
+        'day': fields.char('Day', size=2),
     }
     
     def init(self, cr):
@@ -117,7 +120,8 @@ class ineco_stock_sale(osv.osv):
                   sm.product_uom_qty,
                   sm.product_id,
                   pp.default_code,
-                  sm.product_uom as uom_id
+                  sm.product_uom as uom_id,
+                  to_char(extract(month from sp.date),'00') as day
                 from stock_picking sp
                 join stock_picking_type spt on spt.id = sp.picking_type_id
                 left join stock_warehouse sw on sw.id = spt.warehouse_id
@@ -152,6 +156,7 @@ class ineco_pos_transaction(osv.osv):
         'qty': fields.integer('Quantity'),
         'amount_untaxed': fields.float('Amount Untaxed'),
         'amount_total': fields.float('Amount Total'),
+        'day': fields.char('Day', size=2),
     }
     
     def init(self, cr):
@@ -174,7 +179,8 @@ class ineco_pos_transaction(osv.osv):
                   pol.discount,
                   pol.qty,
                   pol.price_subtotal as amount_untaxed,
-                  pol.price_subtotal_incl as amount_total
+                  pol.price_subtotal_incl as amount_total,
+                  to_char(extract(month from po.date_order),'00') as day
                 from pos_order po
                 join pos_session ps on po.session_id = ps.id
                 join res_users ru on ru.id = po.user_id

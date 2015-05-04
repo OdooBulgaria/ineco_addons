@@ -14,6 +14,7 @@
                 	<field name="picking_id" />
                 	<field name="document_date" />
                 	<field name="origin" invisible="1" />
+                	<field name="day" invisible="1" />
                 	<field name="warehouse_id" />
                 	<field name="user_id" />
                 	<field name="default_code" />
@@ -32,6 +33,7 @@
                 <search string="Stock Receive">
                 	<field name="picking_id" />
                 	<field name="document_date" />
+                	<field name="day" />
                 	<field name="warehouse_id" />
                 	<field name="user_id" />
                 	<field name="default_code" />
@@ -44,6 +46,7 @@
 	                   <filter string="Product" icon="terp-partner" domain="[]" context="{'group_by':'product_id'}"/>
 	                   <filter string="Picking" icon="terp-partner" domain="[]" context="{'group_by':'picking_id'}"/>
 	                   <filter string="User" icon="terp-partner" domain="[]" context="{'group_by':'user_id'}"/>
+	                   <filter string="Day" domain="[]" context="{'group_by':'day'}"/>
 	               </group>
               	</search>
             </field>
@@ -73,6 +76,7 @@
                 	<field name="document_date" />
                 	<field name="origin" />
                 	<field name="warehouse_id" invisible="1" />
+                	<field name="day" invisible="1" />
                 	<field name="user_id" />
                 	<field name="default_code" />
                 	<field name="product_id" />
@@ -90,6 +94,7 @@
                 <search string="Stock Sale">
                 	<field name="picking_id" />
                 	<field name="document_date" />
+                	<field name="day" />
                 	<field name="warehouse_id" />
                 	<field name="user_id" />
                 	<field name="default_code" />
@@ -98,10 +103,11 @@
                 	<field name="product_uom_qty"/>
 	               <group expand="0" string="Group By...">
 	                   <filter string="Date" icon="terp-partner" domain="[]" context="{'group_by':'document_date'}"/>
+	                   <filter string="Day" domain="[]" context="{'group_by':'day'}"/>
 	                   <filter string="Warehouse" icon="terp-partner" domain="[]" context="{'group_by':'warehouse_id'}"/>
 	                   <filter string="Product" icon="terp-partner" domain="[]" context="{'group_by':'product_id'}"/>
 	                   <filter string="Picking" icon="terp-partner" domain="[]" context="{'group_by':'picking_id'}"/>
-	                   <filter string="User" icon="terp-partner" domain="[]" context="{'group_by':'user_id'}"/>
+	                   <filter string="User" icon="terp-partner" domain="[]" context="{'group_by':'user_id'}"/>              
 	               </group>
               	</search>
             </field>
@@ -130,6 +136,7 @@
         			<field name="name" />
         			<field name="pos_reference" />
         			<field name="date_order" invisible="1"/>
+        			<field name="day" invisible="1" />
         			<field name="datetime_order" />
         			<field name="user_id" />
         			<field name="start_at" />
@@ -154,6 +161,7 @@
         			<field name="name" />
         			<field name="pos_reference" />
         			<field name="date_order" />
+        			<field name="day" />
         			<field name="user_id" />
         			<field name="start_at" />
         			<field name="stop_at" />
@@ -163,6 +171,7 @@
 	                   <filter string="Product" icon="terp-partner" domain="[]" context="{'group_by':'product_id'}"/>
 	                   <filter string="User" icon="terp-partner" domain="[]" context="{'group_by':'user_id'}"/>
 	                   <filter string="Date Order" domain="[]" context="{'group_by':'date_order'}" />
+	                   <filter string="Day" domain="[]" context="{'group_by':'day'}"/>
 	               </group>
               	</search>
             </field>
