@@ -27,10 +27,11 @@
     'summary' : 'Use multicurrency on Sale Order / Purchase Order pass to account.invoice',
     'description' : """
 """,
-    'depends' : ['account','sale','purchase','stock','sale_stock',
+    'depends' : ['account','sale','purchase','stock','sale_stock','account',
     ],
     'data' : [
         'sale_view.xml',
+        'account_invoice_view.xml',
     ],
     'update_xml' : [
     ],
