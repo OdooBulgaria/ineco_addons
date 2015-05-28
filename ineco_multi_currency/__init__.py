@@ -22,3 +22,6 @@
 #import res_partner
 import sale
 import res_currency
+import account_invoice
+import stock
+import wizard

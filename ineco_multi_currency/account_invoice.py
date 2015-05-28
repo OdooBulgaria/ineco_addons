@@ -2,7 +2,7 @@
 ##############################################################################
 #
 #    OpenERP, Open Source Management Solution
-#    Copyright (C) 2014 INECO Part., Ltd. (<http://www.ineco.co.th>).
+#    Copyright (C) 2004-2010 INECO Ltd., Part. (<http://www.ineco.co.th>).
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -18,22 +18,20 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-{
-    'name' : 'Ineco Multi Currency',
-    'version' : '0.1',
-    'author' : 'INECO PART., LTD.',
-    'category': 'INECO',
-    'website' : 'http://www.ineco.co.th',
-    'summary' : 'Use multicurrency on Sale Order / Purchase Order pass to account.invoice',
-    'description' : """
-""",
-    'depends' : ['account','sale','purchase','stock','sale_stock',
-    ],
-    'data' : [
-        'sale_view.xml',
-    ],
-    'update_xml' : [
-    ],
-    'installable' : True,
-    'application' : False,
-}
+
+from datetime import datetime, timedelta
+import time
+from openerp.osv import fields, osv
+from openerp.tools.translate import _
+from openerp.tools import DEFAULT_SERVER_DATE_FORMAT, DEFAULT_SERVER_DATETIME_FORMAT
+import openerp.addons.decimal_precision as dp
+from openerp import workflow
+
+class account_invoice(osv.Model):
+    _inherit = 'account.invoice'
+    _columns = {
+        'exchange_date': fields.date('Exchange Date', track_visibility='onchange'),
+        'exchange_rate': fields.float('Exchange Rate', digits=(12,6), track_visibility='onchange'),
+        'exchange_sale_order_id': fields.many2one('sale.order','Sale Order'),
+        'exchange_currency_id': fields.many2one('res.currency','Exchange Currency'),
+    }
